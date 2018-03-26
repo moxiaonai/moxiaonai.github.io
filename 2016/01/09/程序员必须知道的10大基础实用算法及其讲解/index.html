@@ -1,91 +1,137 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
-
-    <!--[if lt IE 9]>
-        <style>body {display: none; background: none !important} </style>
-        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
-    <![endif]-->
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="Moxiaonai" />
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
 
 
-<meta name="description" content="算法一：快速排序算法快速排序是由东尼·霍尔所发展的一种排序算法。在平均状况下，排序 n 个项目要Ο(n log n)次比较。在最坏状况下则需要Ο(_n_2)次比较，但这种状况并不常见。事实上，快速排序通常明显比其他Ο(n log n) 算法更快，因为它的内部循环（inner loop）可以在大部分的架构上很有效率地被实现出来。
-快速排序使用分治法（Divide and conquer）策略来把一个">
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="十大算法," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="算法一：快速排序算法快速排序是由东尼·霍尔所发展的一种排序算法。在平均状况下，排序 _n_ 个项目要Ο(_n_ log _n_)次比较。在最坏状况下则需要Ο(_n_2)次比较，但这种状况并不常见。事实上，快速排序通常明显比其他Ο(_n_ log _n_) 算法更快，因为它的内部循环（inner loop）可以在大部分的架构上很有效率地被实现出来。 快速排序使用分治法（Divide and conq">
+<meta name="keywords" content="十大算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="程序员必须知道的10大基础实用算法及其讲解">
 <meta property="og:url" content="http://yoursite.com/2016/01/09/程序员必须知道的10大基础实用算法及其讲解/index.html">
-<meta property="og:site_name" content="Wood Ching's blog">
-<meta property="og:description" content="算法一：快速排序算法快速排序是由东尼·霍尔所发展的一种排序算法。在平均状况下，排序 n 个项目要Ο(n log n)次比较。在最坏状况下则需要Ο(_n_2)次比较，但这种状况并不常见。事实上，快速排序通常明显比其他Ο(n log n) 算法更快，因为它的内部循环（inner loop）可以在大部分的架构上很有效率地被实现出来。
-快速排序使用分治法（Divide and conquer）策略来把一个">
+<meta property="og:site_name" content="Wood Ching&#39;s blog">
+<meta property="og:description" content="算法一：快速排序算法快速排序是由东尼·霍尔所发展的一种排序算法。在平均状况下，排序 _n_ 个项目要Ο(_n_ log _n_)次比较。在最坏状况下则需要Ο(_n_2)次比较，但这种状况并不常见。事实上，快速排序通常明显比其他Ο(_n_ log _n_) 算法更快，因为它的内部循环（inner loop）可以在大部分的架构上很有效率地被实现出来。 快速排序使用分治法（Divide and conq">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1362811-4546f598836599bb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:updated_time" content="2016-01-09T07:23:42.846Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="程序员必须知道的10大基础实用算法及其讲解">
-<meta name="twitter:description" content="算法一：快速排序算法快速排序是由东尼·霍尔所发展的一种排序算法。在平均状况下，排序 n 个项目要Ο(n log n)次比较。在最坏状况下则需要Ο(_n_2)次比较，但这种状况并不常见。事实上，快速排序通常明显比其他Ο(n log n) 算法更快，因为它的内部循环（inner loop）可以在大部分的架构上很有效率地被实现出来。
-快速排序使用分治法（Divide and conquer）策略来把一个">
-
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
-
-
-    <link rel="alternate" href="/atom.xml" title="Wood Ching&#39;s blog" type="application/atom+xml">
+<meta name="twitter:description" content="算法一：快速排序算法快速排序是由东尼·霍尔所发展的一种排序算法。在平均状况下，排序 _n_ 个项目要Ο(_n_ log _n_)次比较。在最坏状况下则需要Ο(_n_2)次比较，但这种状况并不常见。事实上，快速排序通常明显比其他Ο(_n_ log _n_) 算法更快，因为它的内部循环（inner loop）可以在大部分的架构上很有效率地被实现出来。 快速排序使用分治法（Divide and conq">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1362811-4546f598836599bb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
-    <link rel="shortcut icon" href="/favicon.png">
-
-
-
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
-
-
-    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
-
-
-
-    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
-
-
-<link rel="stylesheet" href="/css/style.css" type="text/css">
-
-
-
-<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-
-
-<title>程序员必须知道的10大基础实用算法及其讲解 | Wood Ching&#39;s blog</title>
-
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-
-<script>
-    var yiliaConfig = {
-        fancybox: true,
-        animate: true,
-        isHome: false,
-        isPost: true,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
-        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: undefined
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
+  };
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+  <link rel="canonical" href="http://yoursite.com/2016/01/09/程序员必须知道的10大基础实用算法及其讲解/"/>
 
 
 
-    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+  <title>程序员必须知道的10大基础实用算法及其讲解 | Wood Ching's blog</title>
+  
+
+
 
 
 
@@ -93,231 +139,227 @@
 
 
 </head>
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            <img src="/img/avatar.png" class="animated zoomIn">
-        </a>
-        <hgroup>
-          <h1 class="header-author"><a href="/">Moxiaonai</a></h1>
-        </hgroup>
 
-        
-        <p class="header-subtitle">Walk steps step by step</p>
-        
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-        
+  
+  
+    
+  
 
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
 
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
-                        
-                        
-                        <li>关于我</li>
-                        
-                    </ul>
-                </div>
-            </div>
-        
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
-                        
-                            <li><a href="/">主页</a></li>
-                        
-                            <li><a href="/archives/">所有文章</a></li>
-                        
-                            <li><a href="/tags/">标签云</a></li>
-                        
-                            <li><a href="/about/">关于我</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
-                            
-                                <a class="fa GitHub" href="/#" title="GitHub"></a>
-                            
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dream/">dream</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emlog/">emlog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-next/">hexo-next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/talent/">talent</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/十大算法/">十大算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/正则表达式/">正则表达式</a></li></ul>
-                    </div>
-                </section>
-                
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
-                    
-                    </div>
-                </section>
-                
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Wood Ching's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Walk steps step by step</p>
+      
+  </div>
 
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">专注于前端</div>
-                </section>
-                
-            </div>
-        </div>
-    </header>                
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Moxiaonai</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                <img src="/img/avatar.png" class="animated zoomIn">
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">Moxiaonai</a></h1>
-            </hgroup>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
             
-            <p class="header-subtitle">Walk steps step by step</p>
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/">主页</a></li>
-                
-                    <li><a href="/archives/">所有文章</a></li>
-                
-                    <li><a href="/tags/">标签云</a></li>
-                
-                    <li><a href="/about/">关于我</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
-                            
-                                <a class="fa GitHub" target="_blank" href="/#" title="GitHub"></a>
-                            
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-            </nav>
-        </header>                
-    </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
 </nav>
-      <div class="body-wrap"><article id="post-程序员必须知道的10大基础实用算法及其讲解" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/01/09/程序员必须知道的10大基础实用算法及其讲解/" class="article-date">
-      <time datetime="2016-01-09T07:15:33.000Z" itemprop="datePublished">Jan 9 2016</time>
-</a>
 
 
-    </div>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
   
-  <div class="article-inner">
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/01/09/程序员必须知道的10大基础实用算法及其讲解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Moxiaonai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wood Ching's blog">
+    </span>
+
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 class="article-title" itemprop="name">
-      程序员必须知道的10大基础实用算法及其讲解
-    </h1>
-  
-
-      </header>
-      
-      <div class="article-info article-info-post">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/algorithm/">algorithm</a>
-    </div>
-
-
+          <h1 class="post-title" itemprop="name headline">程序员必须知道的10大基础实用算法及其讲解</h1>
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/十大算法/">十大算法</a></li></ul>
-    </div>
 
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-09T15:15:33+08:00">
+                Jan 9 2016
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        <h2 id="u7B97_u6CD5_u4E00_uFF1A_u5FEB_u901F_u6392_u5E8F_u7B97_u6CD5"><a href="#u7B97_u6CD5_u4E00_uFF1A_u5FEB_u901F_u6392_u5E8F_u7B97_u6CD5" class="headerlink" title="算法一：快速排序算法"></a><strong>算法一：快速排序算法</strong></h2><p><strong>快速排序</strong>是由东尼·霍尔所发展的一种排序算法。在平均状况下，排序 <em>n</em> 个项目要<strong>Ο</strong>(<em>n</em> log <em>n</em>)次比较。在最坏状况下则需要<strong>Ο</strong>(_n_2)次比较，但这种状况并不常见。事实上，快速排序通常明显比其他<strong>Ο</strong>(<em>n</em> log <em>n</em>) 算法更快，因为它的内部循环（inner loop）可以在大部分的架构上很有效率地被实现出来。</p>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">algorithm</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/01/09/程序员必须知道的10大基础实用算法及其讲解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/09/程序员必须知道的10大基础实用算法及其讲解/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="http://upload-images.jianshu.io/upload_images/1362811-4546f598836599bb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" rel="gallery_cjf84qngi000ek4w3zjl0s56e"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="http://upload-images.jianshu.io/upload_images/1362811-4546f598836599bb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        <h2 id="算法一：快速排序算法"><a href="#算法一：快速排序算法" class="headerlink" title="算法一：快速排序算法"></a><strong>算法一：快速排序算法</strong></h2><p><strong>快速排序</strong>是由东尼·霍尔所发展的一种排序算法。在平均状况下，排序 _n_ 个项目要<strong>Ο</strong>(_n_ log _n_)次比较。在最坏状况下则需要<strong>Ο</strong>(_n_2)次比较，但这种状况并不常见。事实上，快速排序通常明显比其他<strong>Ο</strong>(_n_ log _n_) 算法更快，因为它的内部循环（inner loop）可以在大部分的架构上很有效率地被实现出来。</p>
 <p>快速排序使用分治法（Divide and conquer）策略来把一个串行（list）分为两个子串行（sub-lists）。<br><a id="more"></a><br><strong>算法步骤：</strong></p>
 <p>1 从数列中挑出一个元素，称为 “基准”（pivot），</p>
 <p>2 重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。在这个分区退出之后，该基准就处于数列的中间位置。这个称为<strong>分区（partition）</strong>操作。</p>
 <p>3 递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序。</p>
 <p>递归的最底部情形，是数列的大小是零或一，也就是永远都已经被排序好了。虽然一直递归下去，但是这个算法总会退出，因为在每次的迭代（iteration）中，它至少会把一个元素摆到它最后的位置去。</p>
-<p><a href="http://zezhi.qiniudn.com/wp-content/uploads/2014/06/Sorting_quicksort_anim.gif" target="_blank" rel="external"><img src="http://upload-images.jianshu.io/upload_images/1362811-02cb440443bcd23e.gif?imageMogr2/auto-orient/strip" alt="Sorting_quicksort_anim"></a></p>
-<p><strong>详细介绍：<a href="http://cricode.com/970.html" target="_blank" rel="external">快速排序</a></strong></p>
-<h2 id="u7B97_u6CD5_u4E8C_uFF1A_u5806_u6392_u5E8F_u7B97_u6CD5"><a href="#u7B97_u6CD5_u4E8C_uFF1A_u5806_u6392_u5E8F_u7B97_u6CD5" class="headerlink" title="算法二：堆排序算法"></a><strong>算法二：堆排序算法</strong></h2><p><strong>堆排序</strong>（Heapsort）是指利用堆这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足<em>堆积的性质</em>：即子结点的键值或索引总是小于（或者大于）它的父节点。</p>
-<p>堆排序的平均时间复杂度为<strong>Ο</strong>(_n_log<em>n</em>) 。</p>
+<p><a href="http://zezhi.qiniudn.com/wp-content/uploads/2014/06/Sorting_quicksort_anim.gif" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/1362811-02cb440443bcd23e.gif?imageMogr2/auto-orient/strip" alt="Sorting_quicksort_anim"></a></p>
+<p><strong>详细介绍：<a href="http://cricode.com/970.html" target="_blank" rel="noopener">快速排序</a></strong></p>
+<h2 id="算法二：堆排序算法"><a href="#算法二：堆排序算法" class="headerlink" title="算法二：堆排序算法"></a><strong>算法二：堆排序算法</strong></h2><p><strong>堆排序</strong>（Heapsort）是指利用堆这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足<em>堆积的性质</em>：即子结点的键值或索引总是小于（或者大于）它的父节点。</p>
+<p>堆排序的平均时间复杂度为<strong>Ο</strong>(_n_log_n_) 。</p>
 <p><strong>算法步骤：</strong></p>
 <ol>
 <li>创建一个堆H[0..n-1]</li>
@@ -328,9 +370,9 @@
 <li><p>重复步骤2，直到堆的尺寸为1</p>
 </li>
 </ol>
-<p><a href="http://zezhi.qiniudn.com/wp-content/uploads/2014/06/Sorting_heapsort_anim.gif" target="_blank" rel="external"><img src="http://upload-images.jianshu.io/upload_images/1362811-76d2874a554b0baf.gif?imageMogr2/auto-orient/strip" alt="Sorting_heapsort_anim"></a></p>
-<p><strong>详细介绍：<a href="http://cricode.com/977.html" target="_blank" rel="external">堆排序</a></strong></p>
-<h2 id="u7B97_u6CD5_u4E09_uFF1A**_u5F52_u5E76_u6392_u5E8F**"><a href="#u7B97_u6CD5_u4E09_uFF1A**_u5F52_u5E76_u6392_u5E8F**" class="headerlink" title="算法三：**归并排序**"></a><strong>算法三：**</strong>归并排序**</h2><p><strong>归并排序（Merge sort，台湾译作：合并排序）</strong>是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。</p>
+<p><a href="http://zezhi.qiniudn.com/wp-content/uploads/2014/06/Sorting_heapsort_anim.gif" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/1362811-76d2874a554b0baf.gif?imageMogr2/auto-orient/strip" alt="Sorting_heapsort_anim"></a></p>
+<p><strong>详细介绍：<a href="http://cricode.com/977.html" target="_blank" rel="noopener">堆排序</a></strong></p>
+<h2 id="算法三：-归并排序"><a href="#算法三：-归并排序" class="headerlink" title="算法三：**归并排序**"></a><strong>算法三：**</strong>归并排序**</h2><p><strong>归并排序（Merge sort，台湾译作：合并排序）</strong>是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。</p>
 <p><strong>算法步骤：</strong></p>
 <ol>
 <li><p>申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后的序列</p>
@@ -344,11 +386,11 @@
 <li><p>将另一序列剩下的所有元素直接复制到合并序列尾</p>
 </li>
 </ol>
-<p><a href="http://zezhi.qiniudn.com/wp-content/uploads/2014/06/Merge_sort_animation2.gif" target="_blank" rel="external"><img src="http://upload-images.jianshu.io/upload_images/1362811-9d05dc3ee29a171f.gif?imageMogr2/auto-orient/strip" alt="Merge_sort_animation2"></a></p>
-<p><strong>详细介绍：</strong><a href="http://cricode.com/1333.html" target="_blank" rel="external"><strong>归并**</strong>排序**</a></p>
-<h2 id="u7B97_u6CD5_u56DB_uFF1A_u4E8C_u5206_u67E5_u627E_u7B97_u6CD5"><a href="#u7B97_u6CD5_u56DB_uFF1A_u4E8C_u5206_u67E5_u627E_u7B97_u6CD5" class="headerlink" title="算法四：二分查找算法"></a><strong>算法四：二分查找算法</strong></h2><p><strong>二分查找算法</strong>是一种在有序数组中查找某一特定元素的搜索算法。搜素过程从数组的中间元素开始，如果中间元素正好是要查找的元素，则搜素过程结束；如果某一特定元素大于或者小于中间元素，则在数组大于或小于中间元素的那一半中查找，而且跟开始一样从中间元素开始比较。如果在某一步骤数组为空，则代表找不到。这种搜索算法每一次比较都使搜索范围缩小一半。折半搜索每次把搜索区域减少一半，时间复杂度为<strong>Ο</strong>(log<em>n</em>) 。</p>
-<p><strong>详细介绍：</strong><a href="http://taop.marchtea.com/04.01.html" target="_blank" rel="external"><strong>二分查找算法</strong></a></p>
-<h2 id="u7B97_u6CD5_u4E94_uFF1A**BFPRT_28_u7EBF_u6027_u67E5_u627E_u7B97_u6CD5**_29"><a href="#u7B97_u6CD5_u4E94_uFF1A**BFPRT_28_u7EBF_u6027_u67E5_u627E_u7B97_u6CD5**_29" class="headerlink" title="算法五：**BFPRT(线性查找算法**)"></a><strong>算法五：**</strong>BFPRT<strong><strong>(</strong></strong>线性查找算法<strong>**)</strong></h2><p><strong>BFPRT算法</strong>解决的问题十分经典，即从某n个元素的序列中选出第k大（第k小）的元素，通过巧妙的分析，BFPRT可以保证在最坏情况下仍为线性时间复杂度。该算法的思想与快速排序思想相似，当然，为使得算法在最坏情况下，依然能达到o(n)的时间复杂度，五位算法作者做了精妙的处理。</p>
+<p><a href="http://zezhi.qiniudn.com/wp-content/uploads/2014/06/Merge_sort_animation2.gif" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/1362811-9d05dc3ee29a171f.gif?imageMogr2/auto-orient/strip" alt="Merge_sort_animation2"></a></p>
+<p><strong>详细介绍：</strong><a href="http://cricode.com/1333.html" target="_blank" rel="noopener"><strong>归并**</strong>排序**</a></p>
+<h2 id="算法四：二分查找算法"><a href="#算法四：二分查找算法" class="headerlink" title="算法四：二分查找算法"></a><strong>算法四：二分查找算法</strong></h2><p><strong>二分查找算法</strong>是一种在有序数组中查找某一特定元素的搜索算法。搜素过程从数组的中间元素开始，如果中间元素正好是要查找的元素，则搜素过程结束；如果某一特定元素大于或者小于中间元素，则在数组大于或小于中间元素的那一半中查找，而且跟开始一样从中间元素开始比较。如果在某一步骤数组为空，则代表找不到。这种搜索算法每一次比较都使搜索范围缩小一半。折半搜索每次把搜索区域减少一半，时间复杂度为<strong>Ο</strong>(log_n_) 。</p>
+<p><strong>详细介绍：</strong><a href="http://taop.marchtea.com/04.01.html" target="_blank" rel="noopener"><strong>二分查找算法</strong></a></p>
+<h2 id="算法五：-BFPRT-线性查找算法"><a href="#算法五：-BFPRT-线性查找算法" class="headerlink" title="算法五：**BFPRT(线性查找算法**)"></a><strong>算法五：**</strong>BFPRT<strong><strong>(</strong></strong>线性查找算法<strong>**)</strong></h2><p><strong>BFPRT算法</strong>解决的问题十分经典，即从某n个元素的序列中选出第k大（第k小）的元素，通过巧妙的分析，BFPRT可以保证在最坏情况下仍为线性时间复杂度。该算法的思想与快速排序思想相似，当然，为使得算法在最坏情况下，依然能达到o(n)的时间复杂度，五位算法作者做了精妙的处理。</p>
 <p><strong>算法步骤：</strong></p>
 <ol>
 <li><p>将n个元素每5个一组，分成n/5(上界)组。</p>
@@ -359,14 +401,14 @@
 </li>
 <li><p>用x来分割数组，设小于等于x的个数为k，大于x的个数即为n-k。</p>
 </li>
-<li><p>若i==k，返回x；若i<k，在小于x的元素中递归查找第i小的元素；若i>k，在大于x的元素中递归查找第i-k小的元素。</k，在小于x的元素中递归查找第i小的元素；若i></p>
+<li><p>若i==k，返回x；若i&lt;k，在小于x的元素中递归查找第i小的元素；若i&gt;k，在大于x的元素中递归查找第i-k小的元素。</p>
 </li>
 </ol>
 <p>终止条件：n=1时，返回的即是i小元素。</p>
 <p><strong>详细介绍：</strong></p>
-<p><a href="http://cricode.com/968.html" target="_blank" rel="external">寻找最小(最大)的k个数</a></p>
-<p><a href="http://taop.marchtea.com/02.01.html" target="_blank" rel="external"><strong>线性查找相关算法</strong></a></p>
-<h2 id="u7B97_u6CD5_u516D_uFF1A**DFS_uFF08_u6DF1_u5EA6_u4F18_u5148_u641C_u7D22_uFF09**"><a href="#u7B97_u6CD5_u516D_uFF1A**DFS_uFF08_u6DF1_u5EA6_u4F18_u5148_u641C_u7D22_uFF09**" class="headerlink" title="算法六：**DFS（深度优先搜索）**"></a><strong>算法六：**</strong>D<strong><strong>FS</strong></strong>（深度优先搜索）**</h2><p><strong>深度优先搜索算法</strong>（Depth-First-Search），是搜索算法的一种。它沿着树的深度遍历树的节点，尽可能深的搜索树的分支。当节点v的所有边都己被探寻过，搜索将回溯到发现节点v的那条边的起始节点。这一过程一直进行到已发现从源节点可达的所有节点为止。如果还存在未被发现的节点，则选择其中一个作为源节点并重复以上过程，整个进程反复进行直到所有节点都被访问为止。DFS属于盲目搜索。</p>
+<p><a href="http://cricode.com/968.html" target="_blank" rel="noopener">寻找最小(最大)的k个数</a></p>
+<p><a href="http://taop.marchtea.com/02.01.html" target="_blank" rel="noopener"><strong>线性查找相关算法</strong></a></p>
+<h2 id="算法六：-DFS（深度优先搜索）"><a href="#算法六：-DFS（深度优先搜索）" class="headerlink" title="算法六：**DFS（深度优先搜索）**"></a><strong>算法六：**</strong>D<strong><strong>FS</strong></strong>（深度优先搜索）**</h2><p><strong>深度优先搜索算法</strong>（Depth-First-Search），是搜索算法的一种。它沿着树的深度遍历树的节点，尽可能深的搜索树的分支。当节点v的所有边都己被探寻过，搜索将回溯到发现节点v的那条边的起始节点。这一过程一直进行到已发现从源节点可达的所有节点为止。如果还存在未被发现的节点，则选择其中一个作为源节点并重复以上过程，整个进程反复进行直到所有节点都被访问为止。DFS属于盲目搜索。</p>
 <p>深度优先搜索是图论中的经典算法，利用深度优先搜索算法可以产生目标图的相应拓扑排序表，利用拓扑排序表可以方便的解决很多相关的图论问题，如最大路径问题等等。一般用堆数据结构来辅助实现DFS算法。</p>
 <p><strong>深度优先遍历图算法步骤：</strong></p>
 <ol>
@@ -380,8 +422,8 @@
 <p>上述描述可能比较抽象，举个实例：</p>
 <p>DFS 在访问图中某一起始顶点 v 后，由 v 出发，访问它的任一邻接顶点 w1；再从 w1 出发，访问与 w1邻 接但还没有访问过的顶点 w2；然后再从 w2 出发，进行类似的访问，… 如此进行下去，直至到达所有的邻接顶点都被访问过的顶点 u 为止。</p>
 <p>接着，退回一步，退到前一次刚访问过的顶点，看是否还有其它没有被访问的邻接顶点。如果有，则访问此顶点，之后再从此顶点出发，进行与前述类似的访问；如果没有，就再退回一步进行搜索。重复上述过程，直到连通图中所有顶点都被访问过为止。</p>
-<p><strong>详细介绍：</strong><a href="http://www.cnblogs.com/skywang12345/p/3711483.html" target="_blank" rel="external"><strong>深度优先搜索</strong></a></p>
-<h2 id="u7B97_u6CD5_u4E03_uFF1ABFS_28_u5E7F_u5EA6_u4F18_u5148_u641C_u7D22_29"><a href="#u7B97_u6CD5_u4E03_uFF1ABFS_28_u5E7F_u5EA6_u4F18_u5148_u641C_u7D22_29" class="headerlink" title="算法七：BFS(广度优先搜索)"></a><strong>算法七：BFS(广度优先搜索)</strong></h2><p><strong>广度优先搜索算法</strong>（Breadth-First-Search），是一种图形搜索算法。简单的说，BFS是从根节点开始，沿着树(图)的宽度遍历树(图)的节点。如果所有节点均被访问，则算法中止。BFS同样属于盲目搜索。一般用队列数据结构来辅助实现BFS算法。</p>
+<p><strong>详细介绍：</strong><a href="http://www.cnblogs.com/skywang12345/p/3711483.html" target="_blank" rel="noopener"><strong>深度优先搜索</strong></a></p>
+<h2 id="算法七：BFS-广度优先搜索"><a href="#算法七：BFS-广度优先搜索" class="headerlink" title="算法七：BFS(广度优先搜索)"></a><strong>算法七：BFS(广度优先搜索)</strong></h2><p><strong>广度优先搜索算法</strong>（Breadth-First-Search），是一种图形搜索算法。简单的说，BFS是从根节点开始，沿着树(图)的宽度遍历树(图)的节点。如果所有节点均被访问，则算法中止。BFS同样属于盲目搜索。一般用队列数据结构来辅助实现BFS算法。</p>
 <p>算法步骤：</p>
 <ol>
 <li><p>首先将根节点放入队列中。</p>
@@ -393,32 +435,32 @@
 <li>如果找到目标，则结束搜寻并回传结果。</li>
 <li>否则将它所有尚未检验过的直接子节点加入队列中。</li>
 </ul>
-<ol>
+<ol start="3">
 <li><p>若队列为空，表示整张图都检查过了——亦即图中没有欲搜寻的目标。结束搜寻并回传“找不到目标”。</p>
 </li>
 <li><p>重复步骤2。</p>
 </li>
 </ol>
-<p><a href="http://zezhi.qiniudn.com/wp-content/uploads/2014/06/Animated_BFS.gif" target="_blank" rel="external"><img src="http://upload-images.jianshu.io/upload_images/1362811-4a7cc39ca77864dd.gif?imageMogr2/auto-orient/strip" alt="Animated_BFS"></a></p>
-<p><strong>详细介绍：</strong><a href="http://www.cnblogs.com/skywang12345/p/3711483.html" target="_blank" rel="external"><strong>广度优先搜索</strong></a></p>
-<h2 id="u7B97_u6CD5_u516B_uFF1ADijkstra_u7B97_u6CD5"><a href="#u7B97_u6CD5_u516B_uFF1ADijkstra_u7B97_u6CD5" class="headerlink" title="算法八：Dijkstra算法"></a><strong>算法八：Dijkstra算法</strong></h2><p><strong>戴克斯特拉算法</strong>（Dijkstra’s algorithm）是由荷兰计算机科学家艾兹赫尔·戴克斯特拉提出。迪科斯彻算法使用了广度优先搜索解决非负权有向图的单源最短路径问题，算法最终得到一个最短路径树。该算法常用于路由算法或者作为其他图算法的一个子模块。</p>
-<p>该算法的输入包含了一个有权重的有向图 <em>G</em>，以及G中的一个来源顶点 <em>S</em>。我们以 <em>V</em> 表示 <em>G</em> 中所有顶点的集合。每一个图中的边，都是两个顶点所形成的有序元素对。(<em>u</em>, <em>v</em>) 表示从顶点 <em>u</em> 到 <em>v</em> 有路径相连。我们以 <em>E</em> 表示<em>G</em>中所有边的集合，而边的权重则由权重函数 <em>w</em>: <em>E</em> → [0, ∞] 定义。因此，<em>w</em>(<em>u</em>, <em>v</em>) 就是从顶点 <em>u</em> 到顶点 <em>v</em> 的非负权重（weight）。边的权重可以想像成两个顶点之间的距离。任两点间路径的权重，就是该路径上所有边的权重总和。已知有 <em>V</em> 中有顶点 <em>s</em> 及 <em>t</em>，Dijkstra 算法可以找到 <em>s</em> 到 <em>t</em>的最低权重路径(例如，最短路径)。这个算法也可以在一个图中，找到从一个顶点 <em>s</em> 到任何其他顶点的最短路径。对于不含负权的有向图，Dijkstra算法是目前已知的最快的单源最短路径算法。</p>
+<p><a href="http://zezhi.qiniudn.com/wp-content/uploads/2014/06/Animated_BFS.gif" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/1362811-4a7cc39ca77864dd.gif?imageMogr2/auto-orient/strip" alt="Animated_BFS"></a></p>
+<p><strong>详细介绍：</strong><a href="http://www.cnblogs.com/skywang12345/p/3711483.html" target="_blank" rel="noopener"><strong>广度优先搜索</strong></a></p>
+<h2 id="算法八：Dijkstra算法"><a href="#算法八：Dijkstra算法" class="headerlink" title="算法八：Dijkstra算法"></a><strong>算法八：Dijkstra算法</strong></h2><p><strong>戴克斯特拉算法</strong>（Dijkstra’s algorithm）是由荷兰计算机科学家艾兹赫尔·戴克斯特拉提出。迪科斯彻算法使用了广度优先搜索解决非负权有向图的单源最短路径问题，算法最终得到一个最短路径树。该算法常用于路由算法或者作为其他图算法的一个子模块。</p>
+<p>该算法的输入包含了一个有权重的有向图 _G_，以及G中的一个来源顶点 _S_。我们以 _V_ 表示 _G_ 中所有顶点的集合。每一个图中的边，都是两个顶点所形成的有序元素对。(_u_, _v_) 表示从顶点 _u_ 到 _v_ 有路径相连。我们以 _E_ 表示_G_中所有边的集合，而边的权重则由权重函数 _w_: _E_ → [0, ∞] 定义。因此，_w_(_u_, _v_) 就是从顶点 _u_ 到顶点 _v_ 的非负权重（weight）。边的权重可以想像成两个顶点之间的距离。任两点间路径的权重，就是该路径上所有边的权重总和。已知有 _V_ 中有顶点 _s_ 及 _t_，Dijkstra 算法可以找到 _s_ 到 _t_的最低权重路径(例如，最短路径)。这个算法也可以在一个图中，找到从一个顶点 _s_ 到任何其他顶点的最短路径。对于不含负权的有向图，Dijkstra算法是目前已知的最快的单源最短路径算法。</p>
 <p><strong>算法步骤：</strong></p>
 <ol>
 <li>初始时令 S={V0},T={其余顶点}，T中顶点对应的距离值</li>
 </ol>
-<p>若存在<v0,vi>，d(V0,Vi)为<v0,vi>弧上的权值</v0,vi></v0,vi></p>
-<p>若不存在<v0,vi>，d(V0,Vi)为∞</v0,vi></p>
-<ol>
+<p>若存在&lt;V0,Vi&gt;，d(V0,Vi)为&lt;V0,Vi&gt;弧上的权值</p>
+<p>若不存在&lt;V0,Vi&gt;，d(V0,Vi)为∞</p>
+<ol start="2">
 <li><p>从T中选取一个其距离值为最小的顶点W且不在S中，加入S</p>
 </li>
 <li><p>对其余T中顶点的距离值进行修改：若加进W作中间顶点，从V0到Vi的距离值缩短，则修改此距离值</p>
 </li>
 </ol>
 <p>重复上述步骤2、3，直到S中包含所有顶点，即W=Vi为止</p>
-<p><a href="http://zezhi.qiniudn.com/wp-content/uploads/2014/06/Dijkstra_Animation.gif" target="_blank" rel="external"><img src="http://upload-images.jianshu.io/upload_images/1362811-394cab58e47e8118.gif?imageMogr2/auto-orient/strip" alt="Dijkstra_Animation"></a></p>
-<p><strong>详细：</strong><a href="http://www.cnblogs.com/skywang12345/p/3711512.html" target="_blank" rel="external"><strong>Dijkstra算法</strong></a></p>
-<h2 id="u7B97_u6CD5_u4E5D_uFF1A_u52A8_u6001_u89C4_u5212_u7B97_u6CD5"><a href="#u7B97_u6CD5_u4E5D_uFF1A_u52A8_u6001_u89C4_u5212_u7B97_u6CD5" class="headerlink" title="算法九：动态规划算法"></a><strong>算法九：动态规划算法</strong></h2><p><strong>动态规划</strong>（Dynamic programming）是一种在数学、计算机科学和经济学中使用的，通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法。 动态规划常常适用于有重叠子问题和最优子结构性质的问题，动态规划方法所耗时间往往远少于朴素解法。</p>
+<p><a href="http://zezhi.qiniudn.com/wp-content/uploads/2014/06/Dijkstra_Animation.gif" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/1362811-394cab58e47e8118.gif?imageMogr2/auto-orient/strip" alt="Dijkstra_Animation"></a></p>
+<p><strong>详细：</strong><a href="http://www.cnblogs.com/skywang12345/p/3711512.html" target="_blank" rel="noopener"><strong>Dijkstra算法</strong></a></p>
+<h2 id="算法九：动态规划算法"><a href="#算法九：动态规划算法" class="headerlink" title="算法九：动态规划算法"></a><strong>算法九：动态规划算法</strong></h2><p><strong>动态规划</strong>（Dynamic programming）是一种在数学、计算机科学和经济学中使用的，通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法。 动态规划常常适用于有重叠子问题和最优子结构性质的问题，动态规划方法所耗时间往往远少于朴素解法。</p>
 <p>动态规划背后的基本思想非常简单。大致上，若要解一个给定问题，我们需要解其不同部分（即子问题），再合并子问题的解以得出原问题的解。 通常许多子问题非常相似，为此动态规划法试图仅仅解决每个子问题一次，从而减少计算量： 一旦某个给定子问题的解已经算出，则将其记忆化存储，以便下次需要同一个子问题解之时直接查表。 这种做法在重复子问题的数目关于输入的规模呈指数增长时特别有用。</p>
 <p>关于动态规划最经典的问题当属背包问题。</p>
 <p><strong>算法步骤：</strong></p>
@@ -429,224 +471,509 @@
 </li>
 </ol>
 <p><strong>详细参考：</strong></p>
-<p><a href="http://cricode.com/1096.html" target="_blank" rel="external">从全球导航到输入法：谈谈动态规划</a></p>
-<p><strong><a href="http://hawstein.com/posts/dp-novice-to-advanced.html" target="_blank" rel="external">动态规划</a></strong></p>
-<h2 id="u7B97_u6CD5_u5341_uFF1A_u6734_u7D20_u8D1D_u53F6_u65AF_u5206_u7C7B_u7B97_u6CD5"><a href="#u7B97_u6CD5_u5341_uFF1A_u6734_u7D20_u8D1D_u53F6_u65AF_u5206_u7C7B_u7B97_u6CD5" class="headerlink" title="算法十：朴素贝叶斯分类算法"></a><strong>算法十：朴素贝叶斯分类算法</strong></h2><p>朴素贝叶斯分类算法是一种基于贝叶斯定理的简单概率分类算法。贝叶斯分类的基础是概率推理，就是在各种条件的存在不确定，仅知其出现概率的情况下，如何完成推理和决策任务。概率推理是与确定性推理相对应的。而朴素贝叶斯分类器是基于独立假设的，即假设样本每个特征与其他特征都不相关。</p>
+<p><a href="http://cricode.com/1096.html" target="_blank" rel="noopener">从全球导航到输入法：谈谈动态规划</a></p>
+<p><strong><a href="http://hawstein.com/posts/dp-novice-to-advanced.html" target="_blank" rel="noopener">动态规划</a></strong></p>
+<h2 id="算法十：朴素贝叶斯分类算法"><a href="#算法十：朴素贝叶斯分类算法" class="headerlink" title="算法十：朴素贝叶斯分类算法"></a><strong>算法十：朴素贝叶斯分类算法</strong></h2><p>朴素贝叶斯分类算法是一种基于贝叶斯定理的简单概率分类算法。贝叶斯分类的基础是概率推理，就是在各种条件的存在不确定，仅知其出现概率的情况下，如何完成推理和决策任务。概率推理是与确定性推理相对应的。而朴素贝叶斯分类器是基于独立假设的，即假设样本每个特征与其他特征都不相关。</p>
 <p>朴素贝叶斯分类器依靠精确的自然概率模型，在有监督学习的样本集中能获取得非常好的分类效果。在许多实际应用中，朴素贝叶斯模型参数估计使用最大似然估计方法，换言之朴素贝叶斯模型能工作并没有用到贝叶斯概率或者任何贝叶斯模型。</p>
 <p>尽管是带着这些朴素思想和过于简单化的假设，但朴素贝叶斯分类器在很多复杂的现实情形中仍能够取得相当好的效果。</p>
 <p><strong>详细参考：</strong></p>
-<p><a href="http://cricode.com/1078.html" target="_blank" rel="external">贝叶斯网络</a></p>
+<p><a href="http://cricode.com/1078.html" target="_blank" rel="noopener">贝叶斯网络</a></p>
 
       
     </div>
     
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/十大算法/" rel="tag"># 十大算法</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/25/最全面的常用正则表达式大全/" rel="next" title="最全面的常用正则表达式大全">
+                <i class="fa fa-chevron-left"></i> 最全面的常用正则表达式大全
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/01/10/莫小奈自适用版emlog模板1.02/" rel="prev" title="莫小奈自适用版emlog模板1.02">
+                莫小奈自适用版emlog模板1.02 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/01/09/程序员必须知道的10大基础实用算法及其讲解/">程序员必须知道的10大基础实用算法及其讲解</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">Moxiaonai</a></p>
-        <p><span>发布时间:</span>2016-01-09, 15:15:33</p>
-        <p><span>最后更新:</span>2016-01-09, 15:23:42</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/01/09/程序员必须知道的10大基础实用算法及其讲解/" title="程序员必须知道的10大基础实用算法及其讲解">http://yoursite.com/2016/01/09/程序员必须知道的10大基础实用算法及其讲解/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/01/09/程序员必须知道的10大基础实用算法及其讲解/　　作者: Moxiaonai" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/01/09/程序员必须知道的10大基础实用算法及其讲解/"
+     data-title="程序员必须知道的10大基础实用算法及其讲解"
+     data-content=""
+     data-url="http://yoursite.com/2016/01/09/程序员必须知道的10大基础实用算法及其讲解/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
     </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
+          </div>
+          
 
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/01/10/莫小奈自适用版emlog模板1.02/">
-                    莫小奈自适用版emlog模板1.02
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2015/12/25/最全面的常用正则表达式大全/">
-                    最全面的常用正则表达式大全
-                </a>
-            </div>
-        
-    </nav>
+
+          
 
   
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u7B97_u6CD5_u4E00_uFF1A_u5FEB_u901F_u6392_u5E8F_u7B97_u6CD5"><span class="toc-number">1.</span> <span class="toc-text">算法一：快速排序算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7B97_u6CD5_u4E8C_uFF1A_u5806_u6392_u5E8F_u7B97_u6CD5"><span class="toc-number">2.</span> <span class="toc-text">算法二：堆排序算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7B97_u6CD5_u4E09_uFF1A**_u5F52_u5E76_u6392_u5E8F**"><span class="toc-number">3.</span> <span class="toc-text">算法三：**归并排序**</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7B97_u6CD5_u56DB_uFF1A_u4E8C_u5206_u67E5_u627E_u7B97_u6CD5"><span class="toc-number">4.</span> <span class="toc-text">算法四：二分查找算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7B97_u6CD5_u4E94_uFF1A**BFPRT_28_u7EBF_u6027_u67E5_u627E_u7B97_u6CD5**_29"><span class="toc-number">5.</span> <span class="toc-text">算法五：**BFPRT(线性查找算法**)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7B97_u6CD5_u516D_uFF1A**DFS_uFF08_u6DF1_u5EA6_u4F18_u5148_u641C_u7D22_uFF09**"><span class="toc-number">6.</span> <span class="toc-text">算法六：**DFS（深度优先搜索）**</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7B97_u6CD5_u4E03_uFF1ABFS_28_u5E7F_u5EA6_u4F18_u5148_u641C_u7D22_29"><span class="toc-number">7.</span> <span class="toc-text">算法七：BFS(广度优先搜索)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7B97_u6CD5_u516B_uFF1ADijkstra_u7B97_u6CD5"><span class="toc-number">8.</span> <span class="toc-text">算法八：Dijkstra算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7B97_u6CD5_u4E5D_uFF1A_u52A8_u6001_u89C4_u5212_u7B97_u6CD5"><span class="toc-number">9.</span> <span class="toc-text">算法九：动态规划算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7B97_u6CD5_u5341_uFF1A_u6734_u7D20_u8D1D_u53F6_u65AF_u5206_u7C7B_u7B97_u6CD5"><span class="toc-number">10.</span> <span class="toc-text">算法十：朴素贝叶斯分类算法</span></a></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
-    </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
-        </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"程序员必须知道的10大基础实用算法及其讲解　| Wood Ching's blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
-
-    
-</div>
-
-
-
-
-
-
-
-    
-
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2016/01/10/莫小奈自适用版emlog模板1.02/" title="上一篇: 莫小奈自适用版emlog模板1.02">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2015/12/25/最全面的常用正则表达式大全/" title="下一篇: 最全面的常用正则表达式大全">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
+    <div class="comments" id="comments">
+      <div class="ds-thread" data-thread-key="2016/01/09/程序员必须知道的10大基础实用算法及其讲解/"
+           data-title="程序员必须知道的10大基础实用算法及其讲解" data-url="http://yoursite.com/2016/01/09/程序员必须知道的10大基础实用算法及其讲解/">
+      </div>
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/01/10/莫小奈自适用版emlog模板1.02/">莫小奈自适用版emlog模板1.02</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/09/程序员必须知道的10大基础实用算法及其讲解/">程序员必须知道的10大基础实用算法及其讲解</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/25/最全面的常用正则表达式大全/">最全面的常用正则表达式大全</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/25/hexo-next-主题主页只显示一篇文章解决方案方法/">hexo-next-主题主页只显示一篇文章解决方案方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/21/当你的才华还撑不起你的野心的时候/">当你的才华还撑不起你的野心的时候</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/21/css实现div（测试markdown）/">css实现div（测试markdown）</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/21/Markdown-Basics（快速入门）/">Markdown—Basics（快速入门）</a></li></ul>
+  
 
 
 
-
-    <script>
-        
-    </script>
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                <i class="fa fa-copyright"></i> 
-                2016-2018 Moxiaonai
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
-            </div>
         </div>
         
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>| </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
-        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
-</footer>
-    </div>
-    
-<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            var iPad = window.navigator.userAgent.indexOf('iPad');
-            if (iPad > -1 || $(".left-col").css("display") === "none") {
-                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
-                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
-                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
-            }
-            else {
-                var backgroundnum = 5;
-                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
-            }
-        })
-    </script>
-
-
-
-
-
-<div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
-</div>
-<script>
-    // Open in New Window
-    
-        var oOpenInNew = {
-            
-            
-            
-            
-            
-            
-             archives: ".archive-article-title", 
-             miniArchives: "a.post-list-link", 
-            
-             friends: "#js-friends a", 
-             socail: ".social a" 
-        }
-        for (var x in oOpenInNew) {
-            $(oOpenInNew[x]).attr("target", "_blank");
-        }
-    
-</script>
-
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
   </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Moxiaonai" />
+            
+              <p class="site-author-name" itemprop="name">Moxiaonai</p>
+              <p class="site-description motion-element" itemprop="description">Walk steps step by step</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/moxiaonai" target="_blank" title="github">
+                      
+                        <i class="fa fa-fw fa-globe"></i>github</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/52moxiaonai" target="_blank" title="twitter">
+                      
+                        <i class="fa fa-fw fa-globe"></i>twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://weibo.com/52moxiaonai" target="_blank" title="weibo">
+                      
+                        <i class="fa fa-fw fa-globe"></i>weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://douban.com/people/129422853" target="_blank" title="douban">
+                      
+                        <i class="fa fa-fw fa-globe"></i>douban</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/moxiaonai" target="_blank" title="zhihu">
+                      
+                        <i class="fa fa-fw fa-globe"></i>zhihu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.jianshu.com/users/fb0329de5e06/latest_articles" target="_blank" title="jianshu">
+                      
+                        <i class="fa fa-fw fa-globe"></i>jianshu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://blog.csdn.net/admxn" target="_blank" title="csdn">
+                      
+                        <i class="fa fa-fw fa-globe"></i>csdn</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://moxiaonaiblog.lofter.com" target="_blank" title="lofter">
+                      
+                        <i class="fa fa-fw fa-globe"></i>lofter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://blog.moxiaonai.cn" target="_blank" title="blog">
+                      
+                        <i class="fa fa-fw fa-globe"></i>blog</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://moxiaonai.cn" target="_blank" title="emlog">
+                      
+                        <i class="fa fa-fw fa-globe"></i>emlog</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://lovinghuan.com/" title="Pober Wong" target="_blank">Pober Wong</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法一：快速排序算法"><span class="nav-number">1.</span> <span class="nav-text">算法一：快速排序算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法二：堆排序算法"><span class="nav-number">2.</span> <span class="nav-text">算法二：堆排序算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法三：-归并排序"><span class="nav-number">3.</span> <span class="nav-text">算法三：**归并排序**</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法四：二分查找算法"><span class="nav-number">4.</span> <span class="nav-text">算法四：二分查找算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法五：-BFPRT-线性查找算法"><span class="nav-number">5.</span> <span class="nav-text">算法五：**BFPRT(线性查找算法**)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法六：-DFS（深度优先搜索）"><span class="nav-number">6.</span> <span class="nav-text">算法六：**DFS（深度优先搜索）**</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法七：BFS-广度优先搜索"><span class="nav-number">7.</span> <span class="nav-text">算法七：BFS(广度优先搜索)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法八：Dijkstra算法"><span class="nav-number">8.</span> <span class="nav-text">算法八：Dijkstra算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法九：动态规划算法"><span class="nav-number">9.</span> <span class="nav-text">算法九：动态规划算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法十：朴素贝叶斯分类算法"><span class="nav-number">10.</span> <span class="nav-text">算法十：朴素贝叶斯分类算法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Moxiaonai</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"moxiaonai"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
