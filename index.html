@@ -262,6 +262,204 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/30/day1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Moxiaonai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wood Ching's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/30/day1/" itemprop="url">frontTest-day1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-30T20:38:58+08:00">
+                May 30 2018
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/frontTest/" itemprop="url" rel="index">
+                    <span itemprop="name">frontTest</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2018/05/30/day1/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2018/05/30/day1/" class="cy_cmt_count" data-xid="2018/05/30/day1/" itemprop="commentsCount" ></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="浏览器内核以及浏览器兼容性整理"><a href="#浏览器内核以及浏览器兼容性整理" class="headerlink" title="浏览器内核以及浏览器兼容性整理"></a><center>浏览器内核以及浏览器兼容性整理</center></h2><h3 id="浏览器内核"><a href="#浏览器内核" class="headerlink" title="浏览器内核"></a>浏览器内核</h3><blockquote>
+<p>浏览器内核分为两部分：渲染引擎和js引擎，js引擎越来越独立，常说的浏览器内核一般指的是渲染引擎</p>
+</blockquote>
+<h4 id="当前主流渲染引擎内核"><a href="#当前主流渲染引擎内核" class="headerlink" title="当前主流渲染引擎内核:"></a>当前主流渲染引擎内核:</h4><ol>
+<li>firefox使用gecko引擎 </li>
+<li>IE使用Trident引擎 </li>
+<li>Edge使用edge引擎 </li>
+<li>opera初始使用presto引擎，后来弃用 </li>
+<li>chrome\safari\opera使用webkit引擎 </li>
+<li>13年chrome、opera开始使用Blink引擎(从webkit fork出来的) </li>
+</ol>
+<h4 id="js引擎："><a href="#js引擎：" class="headerlink" title="js引擎："></a>js引擎：</h4><ol>
+<li>Mozilla</li>
+<li>V8<h3 id="浏览器兼容性问题"><a href="#浏览器兼容性问题" class="headerlink" title="浏览器兼容性问题"></a>浏览器兼容性问题</h3><blockquote>
+<p>由于浏览器内核（渲染引擎和js引擎的不同）,导致浏览器展现以及js执行的兼容性出现差异</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="html部分"><a href="#html部分" class="headerlink" title="html部分"></a>html部分</h4><ol>
+<li>h5新标签在在IE9以下浏览器不识别，解决方法:<br><script src="js/html5shiv.js"></script><blockquote>
+<p>可以将h5新标签转化为浏览器兼容的div等标签,css等尽量避免设置tag样式</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="css样式兼容性问题"><a href="#css样式兼容性问题" class="headerlink" title="css样式兼容性问题"></a>css样式兼容性问题</h4><ol>
+<li>cssReset,css重置，常用*{padding:0;margin:0;},没有正确的，只有更合理的。</li>
+<li>浏览器私有属性，autoprefixer</li>
+<li>针对ie8以下hack <!--[if IE 6]><![endif]--></li>
+<li>IE6汇总<ul>
+<li>ie6浮动bug,图片下空白间距bug,display:block;</li>
+<li>ie6没有min-width;</li>
+<li>ie6中margin:0 auto;无法居中，解决方法：父级元素text-align:center;</li>
+<li>ie6下无法设置1px行高，解决方法：设置overflow:hidden;或者设置line-height:1px;</li>
+<li>ie6在使用绝对定位或者相对定位以后，z-index无效，因为其元素依赖父元素的z-index，但是父元素z-index默认为0;子高父低，所以顺序不会改变。</li>
+</ul>
+</li>
+</ol>
+<h4 id="js的兼容性"><a href="#js的兼容性" class="headerlink" title="js的兼容性"></a>js的兼容性</h4><ol>
+<li>事件绑定方法：标准事件为addEventListener，ie下为attachEvent</li>
+<li>事件捕获方式不一致，标准documnet-&gt;element ,ie下element-&gt;document</li>
+<li>事件的获取，标准event,ie是window.event,元素标准是event.target,ie中是window.event.srcElement </li>
+<li>日期处理，早期的ie日期处理函数不是与1900的差值。</li>
+<li>ajax的实现方式，标准是XMLHttprequest，IE是activeXObject</li>
+<li>IE中不能操作tr的innerhtml</li>
+<li>获取节点,标准是parentNode,parentNode.childNodes，IE中是parentElemnet和parentElement.children</li>
+</ol>
+<h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><h5 id="1-事件绑定，事件捕获，事件冒泡"><a href="#1-事件绑定，事件捕获，事件冒泡" class="headerlink" title="1.事件绑定，事件捕获，事件冒泡"></a>1.事件绑定，事件捕获，事件冒泡</h5>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/01/10/莫小奈自适用版emlog模板1.02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -367,7 +565,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://7xpe18.com1.z0.glb.clouddn.com/ziyong.jpg" rel="gallery_cjfknrmxv000gsww37pge4brl"
+                 href="http://7xpe18.com1.z0.glb.clouddn.com/ziyong.jpg" rel="gallery_cjht3m241000bmkw3n64059st"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://7xpe18.com1.z0.glb.clouddn.com/ziyong.jpg" itemprop="contentUrl"/>
               </a>
@@ -545,7 +743,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://upload-images.jianshu.io/upload_images/1362811-4546f598836599bb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" rel="gallery_cjfknrmxs000bsww3h54jga6z"
+                 href="http://upload-images.jianshu.io/upload_images/1362811-4546f598836599bb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" rel="gallery_cjht3m244000gmkw3kmh9x52t"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://upload-images.jianshu.io/upload_images/1362811-4546f598836599bb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" itemprop="contentUrl"/>
               </a>
@@ -719,7 +917,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://7xpe18.com1.z0.glb.clouddn.com/regex.jpg" rel="gallery_cjfknrmxq0009sww3h0o29ynq"
+                 href="http://7xpe18.com1.z0.glb.clouddn.com/regex.jpg" rel="gallery_cjht3m248000imkw3mqmah2tx"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://7xpe18.com1.z0.glb.clouddn.com/regex.jpg" itemprop="contentUrl"/>
               </a>
@@ -892,7 +1090,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://7xpe18.com1.z0.glb.clouddn.com/hexo-next.png" rel="gallery_cjfknrmxe0001sww3imdhu8qs"
+                 href="http://7xpe18.com1.z0.glb.clouddn.com/hexo-next.png" rel="gallery_cjht3m23v0007mkw3b6f3vth7"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://7xpe18.com1.z0.glb.clouddn.com/hexo-next.png" itemprop="contentUrl"/>
               </a>
@@ -910,179 +1108,6 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2015/12/25/hexo-next-主题主页只显示一篇文章解决方案方法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/12/21/Markdown-Basics（快速入门）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Moxiaonai">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wood Ching's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2015/12/21/Markdown-Basics（快速入门）/" itemprop="url">Markdown—Basics（快速入门）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-12-21T14:11:28+08:00">
-                Dec 21 2015
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Markdown/" itemprop="url" rel="index">
-                    <span itemprop="name">Markdown</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2015/12/21/Markdown-Basics（快速入门）/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2015/12/21/Markdown-Basics（快速入门）/" class="cy_cmt_count" data-xid="2015/12/21/Markdown-Basics（快速入门）/" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox"
-                 href="http://7xpe18.com1.z0.glb.clouddn.com/markdown.jpg" rel="gallery_cjfknrmxk0003sww379q7zqx7"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="http://7xpe18.com1.z0.glb.clouddn.com/markdown.jpg" itemprop="contentUrl"/>
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
-
-      
-        
-          <h2 id="段落、标题、区块代码"><a href="#段落、标题、区块代码" class="headerlink" title="段落、标题、区块代码"></a>段落、标题、区块代码</h2><p>一个段落是由一个以上的连接的行句组成，而一个以上的空行则会划分出不同的段落（空行的定义是显示上看起来像是空行，就被视为空行，例如有一行只有空白和 tab，那该行也会被视为空行），一般的段落不需要用空白或换行缩进。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2015/12/21/Markdown-Basics（快速入门）/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1174,7 +1199,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1185,7 +1210,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -1196,7 +1221,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
